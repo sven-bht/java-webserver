@@ -1,0 +1,8 @@
+name: Demo Workflow
+on: [push]
+
+jobs:
+  docker_build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gradlew build
