@@ -19,3 +19,6 @@ jobs:
 
       - name: docker_login
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: push_docker
+        run: docker push webserver && docker push api-server
