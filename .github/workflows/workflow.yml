@@ -16,3 +16,6 @@ jobs:
 
       - name: build_docker
         run: docker build -t webserver ./Webserver && docker build -t api-server ./API-Server
+
+      - name: docker_login
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
