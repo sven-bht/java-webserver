@@ -13,3 +13,6 @@ jobs:
 
       - name: build
         run: ./gradlew build
+
+      - name: build_docker
+        run: docker build -t webserver ./Webserver && docker build -t api-server ./API-Server
