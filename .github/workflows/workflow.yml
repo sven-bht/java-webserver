@@ -21,4 +21,4 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: push_docker
-        run: docker push webserver && docker push api-server
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/esa-buildmanagement:webserver && docker push ${{ secrets.DOCKER_USERNAME }}/esa-buildmanagement:api-server
