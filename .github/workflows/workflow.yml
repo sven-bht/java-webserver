@@ -7,4 +7,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - run: ./gradlew build
+
+      - name: make executable
+        run: chmod +x ./gradlew
+
+      - name: build
+        run: ./gradlew build
